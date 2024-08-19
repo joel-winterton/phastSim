@@ -2604,7 +2604,7 @@ def writeGenomeNewick(node):
             outString += writeGenomeNewick(node.children[c])
             if c < len(node.children) - 1:
                 outString += ','
-        outString += ')[&mutations={'
+        outString += ')' + node.name + '[&mutations={'
     stringToAdd = ''
     for i in range(len(node.mutAnnotation)):
         stringToAdd += node.mutAnnotation[i]
